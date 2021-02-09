@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+.CategoryPage {
+  font-family: "Archivo Black", sans-serif;
+  .logo-container {
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 0;
+    .top-logo {
+      display: inline;
+      position: fixed;
+      width: 150px;
+      height: auto;
+      z-index: 100;
+    }
+    .bellicon {
+      position: fixed;
+      width: 55px;
+      height: 50px;
+      left: 205px;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      color: white;
+      animation: wobble-hor-bottom 0.8s both;
+    }
+
+    .listicon {
+      position: fixed;
+      width: 55px;
+      height: 50px;
+      left: 150px;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      color: white;
+    }
+  }
+
+  .store-bags-minihead {
+    margin: 200px auto 0;
+    font-size: 15px;
+    width: 1130px;
+    height: 28px;
+  }
+  .bagpacks-furybighead {
+    font-size: 60px;
+    width: 1130px;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+  .priceandfilter {
+    display: flex;
+    justify-content: space-between;
+    width: 1130px;
+    margin: 0 auto;
+  }
+
+  .furycontainer {
+    width: 1130px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .furyimg {
+      width: 141.25px;
+      height: 141.25px;
+    }
+  }
+
+  .product-btn {
+    // display: inline-block;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    margin-left: 260px;
+    margin-top: 70px;
+    padding: 15px;
+    width: 240px;
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  .furydesccontainer {
+    
+      top: 130px;
+    width: 1680px;
+    height: 549px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .furydescbox {
+      display: flex;
+      width: 1130px;
+      height: 509px;
+      // margin: auto auto;
+      background-color: white;
+
+      .furydescimg {
+        width: 452px;
+        height: 452px;
+      }
+
+      .furydesctext {
+        position: relative;
+        margin-top: 60px;
+        .descname {
+          font-size: 35px;
+        }
+        .descprice,
+        .descprice {
+          margin-top: 15px;
+          font-size: 25px;
+        }
+        .desctext {
+          font-size: 25px;
+          margin-top: 30px;
+        }
+        .cart-btn {
+          background-color: black;
+          padding: 10px;
+          color: white;
+          margin-top: 50px;
+          padding: 15px;
+          width: 340px;
+          text-align: center;
+          font-weight: 600;
+          &:hover {
+            background-color: gray;
+          }
+        }
+        .desc-closebtn{
+          position: absolute;
+       top : 0;
+          right : 30px;
+          font-size: 30px;
+          
+        }
+      }
+    }
+  }
+}

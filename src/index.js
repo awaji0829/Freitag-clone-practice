@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+// import CssPre from "./Pages/Main/CssPre";
+// import Fmain from "./Pages/Freitag/Fmain";
+// import MusicModal from "./Pages/Main/MusicModal";
+// import SearchMain from "./Pages/Main/SearchMain";
+// import "./index.css";
+import "./styles/reset.css";
+// import CategoryPage from "./Pages/Freitag/CategoryPage";
+import Routes from "./Routes";
+// import "./Pages/Main/CssPre.scss";
+// import CssPre from "./Pages/Main/CssPre";
+// import SearchMain from "./Pages/Main/SearchMain";
+// import Fmain from "./Pages/Main/Fmain";
+// import SearchMain from "./Pages/Main/SearchMain";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <Routes />,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  document.getElementById("root")
+);

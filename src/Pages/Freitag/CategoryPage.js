@@ -62,13 +62,13 @@ class CategoryPage extends Component {
           {furydata.map((fury) => {
             return (
               <>
-                {fury.id < 9 ? (
+                {fury.id < 9 && (
                   <Productimg
                     img={fury.img}
                     showDesc={this.showDesc}
                     id={fury.id}
                   />
-                ) : null}
+                )}
               </>
             );
           })}
@@ -93,13 +93,13 @@ class CategoryPage extends Component {
           {furydata.map((fury) => {
             return (
               <>
-                {fury.id > 8 && fury.id < 17 ? (
+                {fury.id > 8 && fury.id < 17 && (
                   <Productimg
                     img={fury.img}
                     showDesc={this.showDesc}
                     id={fury.id}
                   />
-                ) : null}
+                )}
               </>
             );
           })}
@@ -124,13 +124,13 @@ class CategoryPage extends Component {
           {furydata.map((fury) => {
             return (
               <>
-                {fury.id > 16 && fury.id < 25 ? (
+                {fury.id > 16 && fury.id < 25 && (
                   <Productimg
                     img={fury.img}
                     showDesc={this.showDesc}
                     id={fury.id}
                   />
-                ) : null}
+                )}
               </>
             );
           })}

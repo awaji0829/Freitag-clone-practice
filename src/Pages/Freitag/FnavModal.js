@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 class FnavModal extends Component {
 constructor(){
@@ -10,7 +11,9 @@ openShop = () => {
     this.setState({ openShop: !this.state.openShop });
   };
 
-
+// goCategorypage=()=>{
+//   this.props.history.push("/freitag");
+// }
 
   render() {
     const { isnavopen, openNav } = this.props;
@@ -33,7 +36,7 @@ openShop = () => {
                 <li onClick={this.openShop}>SHOP</li>
                 {!this.state.openShop && (
                   <ul className="shopcate">
-                    <li>BESTSELLERES</li>
+                    <li ><Link to="/categorypage"> BESTSELLERES</Link></li>
                     <li>ONLINE SPECIALS</li>
                   </ul>
                 )}

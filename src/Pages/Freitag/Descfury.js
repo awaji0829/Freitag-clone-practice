@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Descfury extends Component {
     render() {
-        const {img, name, price, color, descone ,desctwo,descthree, closeDesc}= this.props;
+        const {img, id,name, price, color, descone ,desctwo,descthree, closeDesc, cartClick}= this.props;
         return (
             <div className="furydesccontainer">
                     <div className="furydescbox">
@@ -20,8 +20,8 @@ class Descfury extends Component {
                         <div className="desctext">- {descone}</div>
                         <div className="desctext">- {desctwo}</div>
                         <div className="desctext">- {descthree}</div>
-                        <div className="cart-btn">장바구니에 추가</div>
-                        <span className="desc-closebtn" onClick={closeDesc}>X</span>
+                        <div  onClick={()=>cartClick(id)} className="cart-btn">장바구니에 추가</div>
+                        <span  className="desc-closebtn" onClick={closeDesc}>X</span>
                       </div>
                     </div>
                   </div>

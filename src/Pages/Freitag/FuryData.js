@@ -4,7 +4,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/8dc75360817d6f505161b9fea14dc0d24b5a3a5a/000002944110-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price: "346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -17,7 +17,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/8dc75360817d6f505161b9fea14dc0d24b5a3a5a/000002944110-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price: "346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -30,7 +30,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/d878dfc4e42ed310cfd596ec1f3983c18bd7ec81/000002992854-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price: "346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -43,7 +43,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/8dc75360817d6f505161b9fea14dc0d24b5a3a5a/000002944110-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price:"346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -56,7 +56,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/8dc75360817d6f505161b9fea14dc0d24b5a3a5a/000002944110-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price:"346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -69,7 +69,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/d878dfc4e42ed310cfd596ec1f3983c18bd7ec81/000002992854-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price:"346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -82,7 +82,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/8dc75360817d6f505161b9fea14dc0d24b5a3a5a/000002944110-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price:"346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:
@@ -95,7 +95,7 @@ export const FuryData = [
     img:
       "https://freitag.rokka.io/neo_square_thumbnail/509e79373eb62886ad237a8ad07369bbb29c2e92/000002992824-1.jpg",
     name: "F132_00695",
-    price: "$346",
+    price: "346",
     color: "RED",
     descone: "눈에 띄는 라지 플랩",
     desctwo:

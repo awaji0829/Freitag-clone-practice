@@ -17,17 +17,19 @@ class CategoryPage extends Component {
       rangenumone: [0, 8, 16],
       rangenumtwo: [9, 17, 25],
       scroll: 0,
+      isnavopen: true,
+      cartoneData: [],
+      cartOpen: false,
     };
   }
 
   componentDidMount() {
-    // window.addEventListener("scroll", this.onScroll);
     this.setState({ furydata: FuryData });
   }
 
-  // scrollDesc = () => {
-  //   window.scrollTo({ top: 242, behavior: "smooth" });
-  // };
+  openNav = () => {
+    this.setState({ isnavopen: !this.state.isnavopen });
+  };
 
   showDesc = (e) => {
     console.log(typeof e);
@@ -50,13 +52,18 @@ class CategoryPage extends Component {
     this.setState({ isdescClose: !this.state.isdescClose });
   };
 
-  // onScroll = () => {
-  //   console.log(window.scrollY);
-  // };
+  cartClick = (e) => {
+    const fury = this.state.furydata.filter((fury) => {
+      return fury.id === e;
+    });
 
-  // componentWillUnmount = () => {
-  //   window.addEventListener("scroll", this.onScroll);
-  // };
+    const cartData = [...this.state.cartoneData, ...[{ fury }]];
+    this.setState({ cartoneData: cartData, cartOpen: true });
+  };
+
+  openNav = () => {
+    this.setState({ isnavopen: !this.state.isnavopen });
+  };
 
   render() {
     const {
@@ -65,12 +72,26 @@ class CategoryPage extends Component {
       isdescClose,
       rangenumone,
       rangenumtwo,
+      // isnavopen,
     } = this.state;
     return (
       <div className="CategoryPage">
+        {this.state.cartOpen && (
+          <div className="cartmodal">
+            {this.state.cartoneData.map((cart) => {
+              return (
+                <div className="cart-content">
+                  <ul>
+                    <li className="price">{cart.fury[0].price}</li>
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         <div className="logo-container">
           <Link to="/">
-            {" "}
             <img
               className="top-logo"
               alt="logo"
@@ -101,6 +122,7 @@ class CategoryPage extends Component {
             rangenumtwo={rangenumtwo[0]}
             showDesc={this.showDesc}
             closeDesc={this.closeDesc}
+            cartClick={this.cartClick}
           />
 
           <DescProduct
@@ -111,6 +133,7 @@ class CategoryPage extends Component {
             rangenumtwo={rangenumtwo[1]}
             showDesc={this.showDesc}
             closeDesc={this.closeDesc}
+            cartClick={this.cartClick}
           />
 
           <DescProduct
@@ -121,6 +144,7 @@ class CategoryPage extends Component {
             rangenumtwo={rangenumtwo[2]}
             showDesc={this.showDesc}
             closeDesc={this.closeDesc}
+            cartClick={this.cartClick}
           />
         </div>
 

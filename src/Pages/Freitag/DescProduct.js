@@ -11,6 +11,7 @@ class DescProduct extends Component {
               <>
                 {this.props.rangenumone < fury.id &&fury.id < this.props.rangenumtwo && (
                   <Productimg
+                  key={fury.id}
                     img={fury.img}
                     showDesc={this.props.showDesc}
                     id={fury.id}
@@ -24,6 +25,7 @@ class DescProduct extends Component {
               <>
                 {!this.props.isdescClose&& fury.id > this.props.rangenumone && fury.id < this.props.rangenumtwo && (
                   <Descfury
+                  key={fury.id}
                     img={fury.img}
                     name={fury.name}
                     price={fury.price}

@@ -205,73 +205,95 @@
     margin-bottom: 40px;
   }
   .main-stories {
-    width: 1120px;
+    width: 1130px;
     display: flex;
     margin: 0 auto;
-    overflow: scroll;
+    overflow: hidden;
+    position: relative;
 
-    .main-storiesbox {
-      .storyimg {
-        width: 273px;
-        height: 97.5px;
-        margin-right: 10px;
-      }
-      .story-name {
-        font-size: 40px;
-        width: 273px;
-        top: 0;
-        &:hover {
-          background-color: black;
-          color: white;
+    .wrapstory {
+      width: auto;
+      height: auto;
+      display: flex;
+      // transition: all 0.5s ease-out;
+      
+      .main-storiesbox {
+        .storyimg {
+          width: 273px;
+          height: 97.5px;
+          margin-right: 10px;
+        }
+        .story-name {
+          font-size: 40px;
+          width: 273px;
+          top: 0;
+          &:hover {
+            background-color: black;
+            color: white;
+          }
         }
       }
     }
-  }
-  .modaloutside {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 9;
-  }
-  .modalNavcontainer {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: white;
-    width: 260px;
-    height: 100vh;
-    z-index: 10;
-    font-size: 23px;
-    text-align: left;
-    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-    li {
-      height: 55px;
-      border-bottom: rgb(231, 231, 231) solid 1px;
-      & :hover {
-        color: gray;
-      }
-    }
-    .loginen {
-      display: flex;
-      justify-content: space-between;
-    }
-    .searchstores {
-      display: flex;
-      justify-content: space-between;
-    }
-    .searchstores li {
-      border-left: rgb(231, 231, 231) solid 1px;
-      width: 130px;
-    }
-    .shopcate {
-      animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      li {
-        font-size: 13px;
-        color: gray;
-        height: 40px;
-      }
+    
+  .next {
+    position: absolute;
+    right: 5px;
+    top: 50px;
+    color: midnightblue;
+  }
+  .prev {
+    position: absolute;
+    left: 5px;
+    top: 50px;
+    color: white;
+  }
+}
+.modaloutside {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+}
+.modalNavcontainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 260px;
+  height: 100vh;
+  z-index: 10;
+  font-size: 23px;
+  text-align: left;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  li {
+    height: 55px;
+    border-bottom: rgb(231, 231, 231) solid 1px;
+    & :hover {
+      color: gray;
     }
   }
+  .loginen {
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchstores {
+    display: flex;
+    justify-content: space-between;
+  }
+  .searchstores li {
+    border-left: rgb(231, 231, 231) solid 1px;
+    width: 130px;
+  }
+  .shopcate {
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    li {
+      font-size: 13px;
+      color: gray;
+      height: 40px;
+    }
+  }
+}
 }

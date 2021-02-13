@@ -3,9 +3,8 @@ import "./CategoryPage.scss";
 import list from "../../picture/list.png";
 import bell from "../../picture/bell.svg";
 import { FuryData } from "./FuryData";
-// import Descfury from "./Descfury";
-// import Productimg from "./Productimg";
 import DescProduct from "./DescProduct";
+import { Link } from "react-router-dom";
 
 class CategoryPage extends Component {
   constructor() {
@@ -17,24 +16,47 @@ class CategoryPage extends Component {
       isdescClose: false,
       rangenumone: [0, 8, 16],
       rangenumtwo: [9, 17, 25],
+      scroll: 0,
     };
   }
 
   componentDidMount() {
+    // window.addEventListener("scroll", this.onScroll);
     this.setState({ furydata: FuryData });
   }
 
+  // scrollDesc = () => {
+  //   window.scrollTo({ top: 242, behavior: "smooth" });
+  // };
+
   showDesc = (e) => {
+    console.log(typeof e);
+    if (0 < e && e < 9) {
+      window.scrollTo({ top: 242, behavior: "smooth" });
+    } else if (8 < e && e < 17) {
+      window.scrollTo({ top: 400, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 422, behavior: "smooth" });
+    }
+
     const furyDesc = this.state.furydata.filter((fury) => {
       return fury.id === e;
     });
-    console.log(e);
+
     this.setState({ furydescdata: furyDesc, isdescClose: false });
   };
 
   closeDesc = () => {
     this.setState({ isdescClose: !this.state.isdescClose });
   };
+
+  // onScroll = () => {
+  //   console.log(window.scrollY);
+  // };
+
+  // componentWillUnmount = () => {
+  //   window.addEventListener("scroll", this.onScroll);
+  // };
 
   render() {
     const {
@@ -47,11 +69,14 @@ class CategoryPage extends Component {
     return (
       <div className="CategoryPage">
         <div className="logo-container">
-          <img
-            className="top-logo"
-            alt="logo"
-            src="http://www.freitag.ch/profiles/freitag_neo/themes/neocortex/images/logo.svg"
-          ></img>
+          <Link to="/">
+            {" "}
+            <img
+              className="top-logo"
+              alt="logo"
+              src="http://www.freitag.ch/profiles/freitag_neo/themes/neocortex/images/logo.svg"
+            ></img>
+          </Link>
           <img
             className="listicon"
             src={list}

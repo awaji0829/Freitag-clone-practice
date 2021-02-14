@@ -5,8 +5,10 @@ import bell from "../../picture/bell.svg";
 import { FuryData } from "./FuryData";
 import DescProduct from "./DescProduct";
 import { Link } from "react-router-dom";
+import CartModal from "./CartModal";
+import ProductmapList from "./ProductmapList";
 
-class CategoryPage extends Component {
+export default class CategoryPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,8 +16,6 @@ class CategoryPage extends Component {
       furyDesc: [],
       furydescdata: [],
       isdescClose: false,
-      rangenumone: [0, 8, 16],
-      rangenumtwo: [9, 17, 25],
       scroll: 0,
       isnavopen: true,
       cartoneData: [],
@@ -70,26 +70,13 @@ class CategoryPage extends Component {
       furydata,
       furydescdata,
       isdescClose,
-      rangenumone,
-      rangenumtwo,
       // isnavopen,
+      cartoneData,
+      cartOpen,
     } = this.state;
     return (
       <div className="CategoryPage">
-        {this.state.cartOpen && (
-          <div className="cartmodal">
-            {this.state.cartoneData.map((cart) => {
-              return (
-                <div className="cart-content">
-                  <ul>
-                    <li className="price">{cart.fury[0].price}</li>
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
+        <CartModal cartOpen={cartOpen} cartoneData={cartoneData} />
         <div className="logo-container">
           <Link to="/">
             <img
@@ -149,9 +136,19 @@ class CategoryPage extends Component {
         </div>
 
         <div className="product-btn">나만의 F132 FURY 선택하기</div>
+{/* 
+<ProductmapList  furydata={furydata}
+            furydescdata={furydescdata}
+            isdescClose={isdescClose}
+            showDesc={this.showDesc}
+            closeDesc={this.closeDesc}
+            cartClick={this.cartClick}
+/> */}
+
       </div>
     );
   }
 }
 
-export default CategoryPage;
+const rangenumone = [0, 8, 16];
+const rangenumtwo = [9, 17, 25];

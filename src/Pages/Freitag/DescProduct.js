@@ -4,26 +4,27 @@ import Productimg from "./Productimg";
 
 class DescProduct extends Component {
     render() {
+      const {furydata,rangenumone,rangenumtwo,showDesc,closeDesc,cartClick,isdescClose,furydescdata}= this.props;
         return (
             <>
-                     {this.props.furydata.map((fury) => {
+                     {furydata.map((fury) => {
             return (
               <>
-                {this.props.rangenumone < fury.id &&fury.id < this.props.rangenumtwo && (
+                {rangenumone < fury.id &&fury.id < rangenumtwo && (
                   <Productimg
                   key={fury.id}
                     img={fury.img}
-                    showDesc={this.props.showDesc}
+                    showDesc={showDesc}
                     id={fury.id}
                   />
                 )}
               </>
             );
           })}
-          {this.props.furydescdata.map((fury) => {
+          {furydescdata.map((fury) => {
             return (
               <>
-                {!this.props.isdescClose&& fury.id > this.props.rangenumone && fury.id < this.props.rangenumtwo && (
+                {!isdescClose&& fury.id > rangenumone && fury.id < rangenumtwo && (
                   <Descfury
                    key={fury.id}
                     img={fury.img}
@@ -33,9 +34,9 @@ class DescProduct extends Component {
                     descone={fury.descone}
                     desctwo={fury.desctwo}
                     descthree={fury.descthree}
-                    closeDesc={this.props.closeDesc}
+                    closeDesc={closeDesc}
                     id ={fury.id}
-                    cartClick ={this.props.cartClick}
+                    cartClick ={cartClick}
                   />
                 )}
               </>
